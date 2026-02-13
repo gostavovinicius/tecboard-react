@@ -1,5 +1,6 @@
 import "./App.css";
 import { Banner } from "./componentes/Banner";
+import { CardEvento } from "./componentes/CardEvento";
 import { FormularioDeEvento } from "./componentes/FormularioDeEvento";
 import { Tema } from "./componentes/Tema";
 
@@ -13,32 +14,42 @@ function App() {
     { id: 6, nome: "cloud" },
   ];
 
+  const eventos = [
+    {
+      capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_1.png",
+      tema: temas[0],
+      data: new Date(),
+      titulo: "Mulheres no Front",
+    },
+    {
+      capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_2.png",
+      tema: temas[1],
+      data: new Date(),
+      titulo: "Pixel & Code",
+    },
+    {
+      capa: "https://raw.githubusercontent.com/viniciosneves/tecboard-assets/refs/heads/main/imagem_3.png",
+      tema: temas[2],
+      data: new Date(),
+      titulo: "Back-End Masters",
+    },
+  ];
+
   return (
     <main>
       <header>
         <img src="/Logo.png" alt="Logo do Tecboard" />
       </header>
       <Banner />
-      <FormularioDeEvento />
-
-      <section>
-        <Tema tema={temas[0]} />
-      </section>
-      <section>
-        <Tema tema={temas[1]} />
-      </section>
-      <section>
-        <Tema tema={temas[2]} />
-      </section>
-      <section>
-        <Tema tema={temas[3]} />
-      </section>
-      <section>
-        <Tema tema={temas[4]} />
-      </section>
-      <section>
-        <Tema tema={temas[5]} />
-      </section>
+      <FormularioDeEvento temas={temas} />
+      {temas.map(function (item) {
+        return (
+          <section key={item.id}>
+            <Tema tema={item} />
+            <CardEvento evento={eventos[0]} />
+          </section>
+        );
+      })}
     </main>
   );
 }
