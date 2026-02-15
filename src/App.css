@@ -31,6 +31,7 @@ footer {
 .rodape {
   text-align: center;
   margin: 16px 0;
+  padding: 32px;
 }
 
 .rodape p {
