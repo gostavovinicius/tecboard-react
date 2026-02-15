@@ -41,4 +41,8 @@
   font-weight: 700;
   font-size: 25px;
   line-height: 125%;
+  min-height: 60px;
+}
+.card-evento .descricao {
+  font-size: 16px;
 }

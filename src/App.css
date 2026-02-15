@@ -8,3 +8,31 @@ header {
   display: flex;
   justify-content: center;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.container {
+  width: 1000px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  margin-top: 60px;
+}
+
+.rodape {
+  text-align: center;
+  margin: 16px 0;
+}
+
+.rodape p {
+  margin: 0;
+}
